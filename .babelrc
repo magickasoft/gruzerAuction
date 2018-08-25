@@ -1,0 +1,24 @@
+{
+  "presets": ["react-native"],
+  "plugins": [
+    "lodash",
+    [
+      "module-resolver",
+      {
+        "extensions": [".js", ".ios.js", ".android.js"],
+        "alias": {
+          "actions": "./src/actions",
+          "assets": "./src/assets",
+          "components": "./src/components",
+          "config": "./src/config",
+          "containers": "./src/containers",
+          "navigators": "./src/navigators",
+          "reducers": "./src/reducers",
+          "store": "./src/store",
+          "utils": "./src/utils"
+        }
+      }
+    ]
+  ],
+  "retainLines": true
+}

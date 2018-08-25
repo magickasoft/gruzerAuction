@@ -1,4 +1,4 @@
-# MatchAupair Frontend Mobile (RN)
+# gruzerAuction Frontend Mobile (RN)
 ## Install global packages 
 ```bash
 npm install -g yo generator-rn-toolbox

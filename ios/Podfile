@@ -1,0 +1,10 @@
+# source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+#pod 'Bolts'
+
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
+
+target 'gruzerAuction'
+target 'gruzerAuctionTests'

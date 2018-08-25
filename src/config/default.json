@@ -1,0 +1,8 @@
+{
+  "url": "https://dev.site.ru/api/mobile/v1/",
+  "ws": "wss://swagger.ru/ws/connect/",
+  "headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  }
+}

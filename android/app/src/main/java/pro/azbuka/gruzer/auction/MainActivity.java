@@ -1,4 +1,4 @@
-package com.gruzerauction;
+package pro.azbuka.gruzer.auction;
 
 import com.facebook.react.ReactActivity;
 
