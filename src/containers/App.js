@@ -28,6 +28,8 @@ class AppContainer extends PureComponent {
         name: 'default',
         priority: 'normal'
       });
+
+      // PN.addNotificationListener({ userToken: this.props.session.token, setActiveBooking: this.props.setActiveBooking });
     }, 2000); // After login transition
   }
 

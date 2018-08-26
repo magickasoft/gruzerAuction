@@ -8,7 +8,17 @@ import styles from './styles';
 class Home extends PureComponent {
 
   render() {
-    return <WebView uri={config.baseUrl} />;
+      // window.postMessage('asdsd','*');
+    return (
+      <WebView
+        ref={webview => {
+          this.myWebView = webview;
+        }}
+        uri={config.baseUrl}
+        scrollEnabled={false}
+        onMessage={(event)=> console.log(event.nativeEvent.data)}
+      />
+    );
   }
 }
 
