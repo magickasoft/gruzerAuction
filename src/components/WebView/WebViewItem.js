@@ -6,26 +6,24 @@ import styles from './style';
 
 class WebViewItem extends Component {
     state = {
-        isLoaded: false
+      isLoaded: false
     };
     onLoadEnd = () => {
         this.setState({ isLoaded: true });
     };
     render() {
-        return (
-            <View style={styles.container}>
-                <WebView
-                    source={{ uri: this.props.uri }}
-                    onLoadEnd={() => this.onLoadEnd()}
-                />
-                {!this.state.isLoaded && <LoaderSpinner loading={!this.state.isLoaded} /> }
-            </View>
-        );
+      const { onLoadEnd, webViewRef, ...rest } = this.props;
+      return (
+        <View style={styles.container}>
+          <WebView
+            ref={webViewRef}
+            onLoadEnd={onLoadEnd || this.onLoadEnd}
+            {...rest}
+          />
+          {!this.state.isLoaded && <LoaderSpinner loading={!this.state.isLoaded} /> }
+        </View>
+      );
     }
 }
-
-WebViewItem.propTypes = {
- uri: PropTypes.string.isRequired
-};
 
 export default WebViewItem;

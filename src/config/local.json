@@ -1,5 +1,5 @@
 {
   "env": "development",
-  "url": "https://dev.site.ru/api/mobile/v1/",
+  "url": "https://auction-core.infra.kub.gruzer.ru/v1/",
   "baseUrl": "https://auction-front.develop.kub.gruzer.ru/"
 }
