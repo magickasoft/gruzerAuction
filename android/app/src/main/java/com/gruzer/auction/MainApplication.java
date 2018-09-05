@@ -1,4 +1,4 @@
-package pro.azbuka.gruzer.auction;
+package com.gruzer.auction;
 
 import android.app.Application;
 

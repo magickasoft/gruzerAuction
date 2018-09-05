@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "198136419757",
-    "firebase_url": "https://gruzer-f7431.firebaseio.com",
-    "project_id": "gruzer-f7431",
-    "storage_bucket": "gruzer-f7431.appspot.com"
+    "project_number": "1028217162483",
+    "firebase_url": "https://gruzer-app.firebaseio.com",
+    "project_id": "gruzer-app",
+    "storage_bucket": "gruzer-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:198136419757:android:4f804dbed9bf72c2",
+        "mobilesdk_app_id": "1:1028217162483:android:acac1a60d4324891",
         "android_client_info": {
-          "package_name": "pro.azbuka.gruzer.auction"
+          "package_name": "com.gruzer.auction"
         }
       },
       "oauth_client": [
         {
-          "client_id": "198136419757-f22p6n9armqev6a4vjh6uennu6qukbn7.apps.googleusercontent.com",
+          "client_id": "1028217162483-rnl3aqi0bpue67fsveno1h5qfsrl9ki7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "pro.azbuka.gruzer.auction",
+            "package_name": "com.gruzer.auction",
             "certificate_hash": "f4bb08fad9ef145bedde6d2c3d5245c74f423577"
           }
         },
         {
-          "client_id": "198136419757-ehbtcc90k87g00870ihbqhmcrorn4f8p.apps.googleusercontent.com",
+          "client_id": "1028217162483-0njsjra4k66bdnm4ts3uct8mmtdf8ff3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAu96Aj6sZ9AgXQe6ASeTCCkGFsmc6Xvd8"
+          "current_key": "AIzaSyCgYf7ZYXKJ26XxIPNg1YY96-PAS545t8I"
         }
       ],
       "services": {
@@ -40,8 +40,15 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "198136419757-ehbtcc90k87g00870ihbqhmcrorn4f8p.apps.googleusercontent.com",
+              "client_id": "1028217162483-0njsjra4k66bdnm4ts3uct8mmtdf8ff3.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1028217162483-kmo7hre7pv1ibn63ogn3unfmsoti3qip.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gruzer.auction"
+              }
             }
           ]
         },
