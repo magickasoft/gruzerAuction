@@ -14,7 +14,7 @@ class Home extends PureComponent {
         }}
         source={{ uri: config.baseUrl }}
         scrollEnabled={false}
-        onMessage={getMessage}
+        onMessage={this.props.getMessage}
       />
     );
   }
@@ -24,7 +24,7 @@ const mapState = () => ({
 });
 
 const mapDispatch = ({
-
+  getMessage
 });
 
 export default connect(mapState, mapDispatch)(Home);
