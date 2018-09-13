@@ -16,14 +16,43 @@ export const saveToken = token => (dispatch) => {
 
 export const registerToken = () => (dispatch, getState) => {
   const token = getState().app.push.token;
+  const userToken = getState().session.token;
   const uniqueId = DeviceInfo.getUniqueID();
 
   if (!token) {
     PN.registerFCMToken().then((deviceToken) => {
-      // post('/user_devices', { deviceToken, uuid: uniqueId });
+      post('/auction-action/fcm/token', {
+        request: {
+          action: 'token',
+          data: {
+            token: deviceToken,
+            // uuid: uniqueId
+          }
+        },
+        details: {
+          auth: {
+            is_auth: true,
+            token: userToken
+          }
+        }
+      });
     });
   } else {
-    // post('/user_devices', { deviceToken: token, uuid: uniqueId });
+    post('/auction-action/fcm/token', {
+      request: {
+        action: 'token',
+        data: {
+          token,
+          // uuid: uniqueId
+        }
+      },
+      details: {
+        auth: {
+          is_auth: true,
+          token: userToken
+        }
+      }
+    })
   }
 };
 

@@ -9,9 +9,9 @@ export const getMessage = ({ nativeEvent }) => dispatch => {
 
   switch (has(parseData, 'action') && parseData.action) {
     case ACTION_LOGIN: {
-      console.log('login:', ACTION_LOGIN);
       const token = has(parseData, 'token') ? parseData.token : null;
-      dispatch(login({ token }));
+      if (token) dispatch(login({ token }));
+      break;
     }
     default: {
       console.log('default')

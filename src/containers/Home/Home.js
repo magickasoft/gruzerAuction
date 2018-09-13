@@ -13,7 +13,6 @@ class Home extends PureComponent {
           this.webView = webView;
         }}
         source={{ uri: config.baseUrl }}
-        scrollEnabled={false}
         onMessage={this.props.getMessage}
       />
     );
