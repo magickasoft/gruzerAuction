@@ -1,8 +1,10 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
+import { Platform, StatusBar, View } from 'react-native';
 import { connect } from 'react-redux';
 import { WebView } from 'components';
 import config from 'config';
 import { getMessage } from 'actions/webMessages';
+import { isIphoneX } from 'utils';
 
 class Home extends PureComponent {
   componentDidMount(){
@@ -12,13 +14,20 @@ class Home extends PureComponent {
   render() {
 
     return (
-      <WebView
-        webViewRef={webView => {
-          this.webView = webView;
-        }}
-        source={{ uri: config.baseUrl }}
-        onMessage={this.props.getMessage}
-      />
+      <Fragment>
+        {Platform.OS === 'ios' &&
+          <View
+            style={{ height: isIphoneX() ? 40 : (StatusBar.currentHeight + 2) || 21, backgroundColor: '#fff' }}
+          />
+        }
+        <WebView
+          webViewRef={webView => {
+            this.webView = webView;
+          }}
+          source={{ uri: config.baseUrl }}
+          onMessage={this.props.getMessage}
+        />
+      </Fragment>
     );
   }
 }
