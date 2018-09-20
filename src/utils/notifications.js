@@ -29,12 +29,10 @@ class PushNotification {
       this.onOpenHandler = () => {};
 
       FCM.getInitialNotification().then((notif) => {
-        console.log('Notification getInitialNotification:', notif);
         this.onOpenFromTray(notif);
       });
 
       this.notificationListener = FCM.on(FCMEvent.Notification, (notif) => {
-        console.log('Notification on:', notif);
         if (notif.local_notification) {
           return;
         }

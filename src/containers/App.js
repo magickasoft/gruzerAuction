@@ -19,7 +19,6 @@ class AppContainer extends PureComponent {
     setTimeout(async () => {
       await PN.getNotificationsPermissions();
       PN.registerFCMToken().then((token) => {
-        console.log('registerFCMToken', token);
         this.props.dispatch(saveToken(token));
       });
 
