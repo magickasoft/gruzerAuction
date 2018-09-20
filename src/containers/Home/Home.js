@@ -10,8 +10,6 @@ import PN from 'utils/notifications';
 class Home extends PureComponent {
   componentDidMount(){
     PN.addNotificationListener({ userToken: this.props.session.token });
-    // console.log('this.webView', this.webView);
-    // setTimeout(() => console.log('this.webView', this.webView), 6000);
   }
   componentWillUnmount() {
     PN.clearNotificationListener();
