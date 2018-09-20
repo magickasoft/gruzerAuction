@@ -16,23 +16,25 @@ class PushNotification {
 
   getNotificationsPermissions = async () => {
     try {
-      await FCM.requestPermissions({ badge: false, sound: true, alert: true });
+      await FCM.requestPermissions({ badge: true, sound: true, alert: true });
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error(e);
     }
   };
 
-  addNotificationListener = ({ userToken, setActiveBooking }) => {
+  addNotificationListener = ({ userToken }) => {
     if (!this.notificationListener) {
       this.userToken = userToken;
-      this.onOpenHandler = setActiveBooking;
+      this.onOpenHandler = () => {};
 
       FCM.getInitialNotification().then((notif) => {
+        console.log('Notification getInitialNotification:', notif);
         this.onOpenFromTray(notif);
       });
 
       this.notificationListener = FCM.on(FCMEvent.Notification, (notif) => {
+        console.log('Notification on:', notif);
         if (notif.local_notification) {
           return;
         }
@@ -69,11 +71,11 @@ class PushNotification {
 
   onOpenFromTray = (notif) => {
     if (this.userToken && notif) {
-      const status = notif.statusKind || notif.kind;
-
-      if (notif.booking_id && status === BOOKING_STATUS_MESSAGE) {
-        this.onOpenHandler(notif.booking_id);
-      }
+      // const status = notif.statusKind || notif.kind;
+      //
+      // if (notif.booking_id && status === BOOKING_STATUS_MESSAGE) {
+      //   this.onOpenHandler(notif.booking_id);
+      // }
     }
   };
 
